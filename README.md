@@ -5,10 +5,10 @@ The Non-Inverting Programmable Gain Amplifier is a configuration with run-time s
 
 ![Non-Inverting PGA](images/configuration.png)
 
-<img src="images/non-inverting-gain.PNG" width="300"/>
+![Non-Inverting PGA Equation](images/non-inverting-gain.PNG)
 
 ### Mindi Simulation
-<img src="images/mplab-mindi-analog-simulator.png" width="100"/>
+![Mindi](images/mplab-mindi-analog-simulator.png)
 
 Download and open the follower **Mindi schematic [here](schematics/Non_inverting_PGA.wxsch)**
 
