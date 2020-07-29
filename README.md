@@ -1,11 +1,11 @@
-# Getting started with Mindi® simulation and AVR®DB microcontrollers
+# Getting started with Mindi® simulation and PIC18-Q41 microcontrollers
 This guide will get you up and running with simulating the analog OPAMP module in PIC18-Q41 family devices using the Mindi simulation tool.
 ## Configuration: Non-Inverting Programmable Gain Amplifier (PGA)
 The Non-Inverting Programmable Gain Amplifier is a configuration with run-time selectable positive gain.
 
 ![Non-Inverting PGA](images/configuration.png)
 
-<img src="images/non-inverting-gain.png" width="300"/>
+<img src="images/non-inverting-gain.PNG" width="300"/>
 
 ### Mindi Simulation
 <img src="images/mplab-mindi-analog-simulator.png" width="100"/>
