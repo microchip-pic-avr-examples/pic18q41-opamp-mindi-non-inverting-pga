@@ -489,7 +489,7 @@ Property name="TextAlignment" value="AlignLeft" autopos=1 normal=Left rotated=Le
 .EndTextAnnotation
 --SXVERSION1.5
 .Instance
-Attributes type=symbol name="Free_text" selected=1 protected=0 x=-240 y=7680 orient=N0
+Attributes type=symbol name="Free_text" selected=0 protected=0 x=-240 y=7680 orient=N0
 Property name="value" value="Non-Inverting PGA gain settings:\n\nGain      GSEL      1+  R2/R1    \n1.07      0x0           16/15    \n1.14      0x1           8/7\n1.33      0x2           4/3\n2           0x3            2\n2.67      0x4            8/3\n4            0x5           4 \n8            0x6           8 \n16          0x7          16" autopos=0 x=0 y=156 align=LeftBase linear=1 selectable=1 font=FreeText
 Netnames
 .EndInstance
@@ -500,13 +500,13 @@ TextBlockInfo company="MICROCHIP TECHNOLOGY INC" title="Non-Inverting PGA PIC18Q
 Property name="StyleNormal" value="DefaultTitleBlock" autopos=1 normal=Left rotated=Left visible=0 font=Default order=-1
 Property name="StyleSelected" value="DefaultTitleBlockSelected" autopos=1 normal=Left rotated=Left visible=0 font=Default order=-1
 .EndTitleBlockAnnotation
-Text value=".simulator SIMETRIX\n.TRAN 400n 40m\n.options noraw\n.simulator DEFAULT\n"
+Text value=".simulator SIMETRIX\n.TRAN 400n 40m\n.options noraw\n.inc .\\Opamp_PIC18_Q41.lb\n.simulator DEFAULT"
 LicenseInfo version="8.20m" feats=Basic|AD|Micron|Mcore2|Schematic|Advanced|Sim|Demo|Rtn|SIMPLIS_IF|beta serial=unknown user="unknown" code=unknown product="MPLAB Mindi" binarch=x86 system="WINNT/10.0/x64/16515985408/4/1/8/625471873"
 SimulatorMode value="SIMetrix"
-View x=-940 y=3172 zoomlevel=32 zoom=9 snapgrid=120 offsetX=940 offsetY=-3172
+View x=-940 y=20 zoomlevel=32 zoom=9 snapgrid=120 offsetX=940 offsetY=-3172
 Property name="CreateProduct" value="MPLAB Mindi" type=value
 Property name="GUID" value="{34338fab-f8f7-41d0-914d-46fb839c82e4}" type=value
-Property name="UserVersion" value="64" type=value
-Property name="WriteLog" value="64/64/43022/43022" type=value
+Property name="UserVersion" value="65" type=value
+Property name="WriteLog" value="65/65/43294/43294" type=value
 .EndSchematic
 .EndComponent
