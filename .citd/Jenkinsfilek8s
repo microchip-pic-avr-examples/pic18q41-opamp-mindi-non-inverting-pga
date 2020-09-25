@@ -1,3 +1,5 @@
+// Mindi-v1.1.0
+
 pipeline {
     agent {
         kubernetes {
@@ -18,7 +20,6 @@ pipeline {
 		GITHUB_URL = 'https://github.com/microchip-pic-avr-examples/pic18q41-opamp-mindi-non-inverting-pga'
 		DEPLOY_TOOL_URL = 'https://bitbucket.microchip.com/scm/citd/tool-github-deploy.git'
 		DEPLOY_BRANCHES = 'master'
-		EXCLUDE_FILES = '.citd,.gitignore,.gitattributes'
 		SEMVER_REGEX = '^(0|[1-9]\\d*)+\\.(0|[1-9]\\d*)+\\.(0|[1-9]\\d*)+$'
 	}
 	
@@ -48,14 +49,14 @@ pipeline {
 						
 						downloadDeployTool()
 						
+
 						withCredentials([usernamePassword(credentialsId: '8bit-examples.github.com', usernameVariable: 'USER_NAME', passwordVariable:'USER_PASS' )]) {					
-							execute("python tool-github-deploy/tool-github-deploy/tool-github-deploy.py -deploy=true -gpat=${USER_PASS} -dgid=${USER_NAME} -dburl=${env.SOURCE_URL} -dgurl=${env.GITHUB_URL} -dbranch=${env.DEPLOY_BRANCHES} -dtag=${env.TAG_NAME} -def=${env.EXCLUDE_FILES} -dmfd=true")	
+							execute("python tool-github-deploy/tool-github-deploy/tool-github-deploy.py -deploy=true -gpat=${USER_PASS} -dgid=${USER_NAME} -dburl=${env.SOURCE_URL} -dgurl=${env.GITHUB_URL} -dbranch=${env.DEPLOY_BRANCHES} -dtag=${env.TAG_NAME} -dmfd=true")	
 						}
 						
 						withCredentials([usernamePassword(credentialsId: '8bit-examples.github.com', usernameVariable: 'USER_NAME', passwordVariable:'USER_PASS' )]) {					
 							execute("python tool-github-deploy/tool-github-deploy/tool-github-deploy.py -rlo=true -gpat=${USER_PASS} -dgid=${USER_NAME} -rpn=${gitHubRepo} -rltv=${env.TAG_NAME} -rltt=${env.TAG_NAME} -dmfd=true")	
 						}
-						
 						sendSuccessfulDeploymentEmail()
 					}
 				}
